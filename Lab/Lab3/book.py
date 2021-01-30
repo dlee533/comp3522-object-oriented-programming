@@ -1,5 +1,5 @@
 import abc
-from datetime import datetime
+from datetime import date
 
 
 class Item(abc.ABC):
@@ -128,7 +128,7 @@ class Dvd(Item):
     Represents a single DVD in catalogue which is identified through its call number.
     """
 
-    def __init__(self, call_num: str, title: str, num_copies: int, release_date: datetime, region_code: str):
+    def __init__(self, call_num: str, title: str, num_copies: int, release_date: date, region_code: str):
         """
         Initializes a Dvd.
 
