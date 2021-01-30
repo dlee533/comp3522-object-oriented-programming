@@ -273,10 +273,12 @@ class LibraryItemGenerator:
         call_num = input("Enter Call Number: ")
         title = input("Enter item title: ")
         num_copies = int(input("Enter number of copies (positive number): "))
+        if num_copies < 0:
+            num_copies = 0
         item_data = (call_num, title, num_copies)
 
         while True:
-            item_type = input("Enter item type: ")
+            item_type = input("Enter item type: ").strip().lower()
             if item_type in ["book", "journal", "dvd"]:
                 break
 
