@@ -70,7 +70,7 @@ class Moderator:
             user = self._users[i]
             print(f"{i + 1}. {user.name}")
         print("".center(25, "-"))
-        user_index = int(input("Enter user number: ")) - 1
+        user_index = int(input("Enter a number: ")) - 1
         user = self._users[user_index]
 
         menu_input = 0
@@ -82,7 +82,7 @@ class Moderator:
             print("4. View Bank Account Details")
             print("5. Logout")
             print("".center(25, "-"))
-            menu_input = int(input("Select: "))
+            menu_input = int(input("Enter a number: "))
             if menu_input == 1:
                 self._view_budgets(user)
             elif menu_input == 2:
