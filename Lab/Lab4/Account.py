@@ -18,6 +18,9 @@ class Account:
         self._account_num = account_num
         self._balance = balance
 
+    def decrease_balance(self, amount):
+        self._balance -= amount
+
     def __str__(self):
         """
         Return string of Account details.

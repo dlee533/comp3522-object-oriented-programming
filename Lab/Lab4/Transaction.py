@@ -1,4 +1,4 @@
-from Lab.Lab4.Category import Category
+from lab4.Category import Category
 
 
 class Transaction:

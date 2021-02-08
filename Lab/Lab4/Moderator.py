@@ -1,8 +1,8 @@
 from datetime import datetime
 import time
 
-from Lab.Lab4.Category import Category
-from Lab.Lab4.Transaction import Transaction
+from lab4.Category import Category
+from lab4.Transaction import Transaction
 
 
 class Moderator:
@@ -134,6 +134,8 @@ class Moderator:
             budgets[budget_category - 1].add_transaction(transaction)
             new_transactions.append(transaction)
             print("".center(25, '-'))
+            account = user.account
+            account.decrease_balance(amount)
             if input("Exit(y/n): ") == "y":
                 for new_transaction in new_transactions:
                     print(new_transaction)
