@@ -1,0 +1,6 @@
+definition:
+1. A concise explanation of the meaning of a word, phrase or symbol.
+2. A paraphrase describing a concept.
+3. One or more sentences UNIQUELY identifying a concept.
+4. Clarity of outline (e.g. of a body).
+
