@@ -79,15 +79,16 @@ class Dictionary:
         FileHandler.write_lines(Dictionary.QUERY_HISTORY_FILEPATH, f"{word}:\n{formatted_definition}\n")
         return formatted_definition
 
-    def simulate_dictionary(self, file_path):
+    def simulate_dictionary(self):
         """
         Simulates the dictionary program.
 
-        :param file_path: str
-        :precondition: file_path must be a string
         :return: None
         """
-        if not self.load_dictionary(file_path):
+        file_path = input("Please enter the path to your dictionary file (e.g. data.json): ").lower().strip()
+
+        self.load_dictionary(file_path)
+        if not self._loaded:
             return
 
         user_query = input("Please enter a word (or enter 'exitprogram' to exit the program): ").lower().strip()
@@ -97,11 +98,12 @@ class Dictionary:
                 print("Definition(s) for the word " + user_query + ":\n" + definition)
             user_query = input("Please enter a word (or enter 'exitprogram' to exit the program): ").lower().strip()
 
-
 def main():
-    file_path = "data.json"
+    """
+    Creates a Dictionary object and runs the dictionary program simulation.
+    """
     dictionary = Dictionary()
-    dictionary.simulate_dictionary(file_path)
+    dictionary.simulate_dictionary()
 
     print("Thanks for using this program!")
 
