@@ -162,28 +162,35 @@ def create_bidder():
 
 
 def main():
-    bidders = []
 
-    # Hardcoding the bidders.
-    bidders.append(Bidder("Jojo", 3000, random.random(), 1.2))
-    bidders.append(Bidder("Melissa", 7000, random.random(), 1.5))
-    bidders.append(Bidder("Priya", 15000, random.random(), 1.1))
-    bidders.append(Bidder("Kewei", 800, random.random(), 1.9))
-    bidders.append(Bidder("Scott", 4000, random.random(), 2))
-
-    while input("Add bidder(y/n): ").lower() == 'y':
-        try:
-            bidders.append(create_bidder())
-        except ValueError:
-            print("Incorrect input")
-
-    auction_item = input("Name of item being auctioned: ")
+    auction_item = input("Enter bid item: ")
     while True:
         try:
-            starting_price = float(input("Starting price of item being auctioned: "))
+            starting_price = float(input("Enter starting price: "))
             break
         except ValueError:
             print("Incorrect input")
+
+    prompt = "Do you want to use hardcoded bidders or new custom bidders?\n" \
+             "Enter 1 for hardcoded bidders\n" \
+             "Enter 2 to begin adding custom bidders\n"
+
+    bidders = []
+    if input(prompt).strip() == "1":
+        # Hardcoding the bidders.
+        bidders.append(Bidder("Jojo", 3000, random.random(), 1.2))
+        bidders.append(Bidder("Melissa", 7000, random.random(), 1.5))
+        bidders.append(Bidder("Priya", 15000, random.random(), 1.1))
+        bidders.append(Bidder("Kewei", 800, random.random(), 1.9))
+        bidders.append(Bidder("Scott", 4000, random.random(), 2))
+    else:
+        while True:
+            try:
+                bidders.append(create_bidder())
+            except ValueError:
+                print("Incorrect input")
+            if input("Add bidder(y/n): ").strip().lower() == 'n':
+                break
 
     print("\n\nStarting Auction!!")
     print("------------------")
