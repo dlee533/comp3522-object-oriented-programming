@@ -1,5 +1,5 @@
 """ This module houses the library"""
-from book import Book, Journal, Dvd, Item
+from Book import Book, Journal, Dvd, Item
 import difflib
 import datetime
 
