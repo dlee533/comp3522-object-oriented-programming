@@ -1,6 +1,6 @@
 from texttable import Texttable
 
-from Lab8.Catalogue import Catalogue
+from Lab.Lab8.Catalogue import Catalogue
 
 
 class Library:

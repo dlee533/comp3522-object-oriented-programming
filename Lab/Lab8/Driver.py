@@ -1,5 +1,5 @@
-from Lab8.Book import Book
-from Lab8.Library import Library
+from Lab.Lab8.Book import Book
+from Lab.Lab8.Library import Library
 
 
 def generate_test_books():

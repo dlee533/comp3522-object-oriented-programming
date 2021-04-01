@@ -1,7 +1,7 @@
 from ItemFactory import ItemFactory
 import datetime
 
-from Lab8.Dvd import Dvd
+from Lab.Lab8.Dvd import Dvd
 
 
 class DvdFactory(ItemFactory):

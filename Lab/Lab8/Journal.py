@@ -1,4 +1,4 @@
-from Lab8.Item import Item
+from Lab.Lab8.Item import Item
 
 
 class Journal(Item):

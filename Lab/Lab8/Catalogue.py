@@ -2,11 +2,11 @@ import difflib
 
 from texttable import Texttable
 
-from Lab8.BookFactory import BookFactory
-from Lab8.DvdFactory import DvdFactory
-from Lab8.Item import Item
-from Lab8.ItemType import ItemType
-from Lab8.JournalFactory import JournalFactory
+from Lab.Lab8.BookFactory import BookFactory
+from Lab.Lab8.DvdFactory import DvdFactory
+from Lab.Lab8.Item import Item
+from Lab.Lab8.ItemType import ItemType
+from Lab.Lab8.JournalFactory import JournalFactory
 
 
 class Catalogue:
