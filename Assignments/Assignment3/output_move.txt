@@ -1,0 +1,35 @@
+Timestamp: 15/04/2021 22:44
+Number of requests: 3
+Name: pound
+ID: 1
+Generation: generation-i
+Accuracy: 100
+pp: 35
+Power: 40
+Type: normal
+Damage class: physical
+Effect (short): Inflicts regular damage with no additional effect.
+
+
+Name: karate-chop
+ID: 2
+Generation: generation-i
+Accuracy: 100
+pp: 25
+Power: 50
+Type: fighting
+Damage class: physical
+Effect (short): Has an increased chance for a critical hit.
+
+
+Name: mega-punch
+ID: 5
+Generation: generation-i
+Accuracy: 85
+pp: 20
+Power: 80
+Type: normal
+Damage class: physical
+Effect (short): Inflicts regular damage with no additional effect.
+
+
